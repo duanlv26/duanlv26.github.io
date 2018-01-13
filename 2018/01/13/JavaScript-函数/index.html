@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="查看字符串长度：console.log(&amp;apos;Hello world!&amp;apos;.length);     // 12 ----------------------------------------------- var str = &amp;apos;Hello world!&amp;apos; ; console.log(&amp;apos;str&amp;apos;.length);        // 12">
+<meta name="description" content="如果要多次使用同一段代码，可以把他们封装成一个函数。 定义一个函数的语法： function name(arguments){        //arguments类数组对象     statements;                //statements 声明；语句；     } 如下是需要传递两个参数的函数。 function add( num1 , num2 ){     var to">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript 字符串">
-<meta property="og:url" content="http://yoursite.com/2018/01/10/JavaScript-字符串/index.html">
+<meta property="og:title" content="JavaScript-函数">
+<meta property="og:url" content="http://yoursite.com/2018/01/13/JavaScript-函数/index.html">
 <meta property="og:site_name" content="Duanlv&#39;s blog">
-<meta property="og:description" content="查看字符串长度：console.log(&amp;apos;Hello world!&amp;apos;.length);     // 12 ----------------------------------------------- var str = &amp;apos;Hello world!&amp;apos; ; console.log(&amp;apos;str&amp;apos;.length);        // 12">
+<meta property="og:description" content="如果要多次使用同一段代码，可以把他们封装成一个函数。 定义一个函数的语法： function name(arguments){        //arguments类数组对象     statements;                //statements 声明；语句；     } 如下是需要传递两个参数的函数。 function add( num1 , num2 ){     var to">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-10T09:02:12.969Z">
+<meta property="og:updated_time" content="2018-01-13T06:28:46.978Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript 字符串">
-<meta name="twitter:description" content="查看字符串长度：console.log(&amp;apos;Hello world!&amp;apos;.length);     // 12 ----------------------------------------------- var str = &amp;apos;Hello world!&amp;apos; ; console.log(&amp;apos;str&amp;apos;.length);        // 12">
+<meta name="twitter:title" content="JavaScript-函数">
+<meta name="twitter:description" content="如果要多次使用同一段代码，可以把他们封装成一个函数。 定义一个函数的语法： function name(arguments){        //arguments类数组对象     statements;                //statements 声明；语句；     } 如下是需要传递两个参数的函数。 function add( num1 , num2 ){     var to">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/10/JavaScript-字符串/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/13/JavaScript-函数/"/>
 
 
 
 
 
-  <title>JavaScript 字符串 | Duanlv's blog</title>
+  <title>JavaScript-函数 | Duanlv's blog</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/10/JavaScript-字符串/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/13/JavaScript-函数/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Duanlv">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JavaScript 字符串</h1>
+          <h1 class="post-title" itemprop="name headline">JavaScript-函数</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-10T16:58:42+08:00">
-                2018-01-10
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-13T14:27:45+08:00">
+                2018-01-13
               </time>
             
 
@@ -299,65 +299,43 @@
       
 
       
-        <h2 id="查看字符串长度："><a href="#查看字符串长度：" class="headerlink" title="查看字符串长度："></a>查看字符串长度：</h2><pre><code>console.log(&apos;Hello world!&apos;.length);     // 12
------------------------------------------------
-var str = &apos;Hello world!&apos; ;
-console.log(&apos;str&apos;.length);        // 12 
------------------------------------------------
-var str = &apos;Hello world!\n&apos; ;    // 13 
-                [ \n 代表回车，转义符算作一个字符]
------------------------------------------------
-var len = &apos;Hello world!&apos;.lengh ;
-console,log( len ) ;            // 12
-</code></pre><h2 id="使用-操作符取单个字符："><a href="#使用-操作符取单个字符：" class="headerlink" title="使用 [ ] 操作符取单个字符："></a>使用 [ ] 操作符取单个字符：</h2><p>字符串 <strong><code>ABCDE</code></strong>中 <code>a</code> <code>b</code> <code>c</code> <code>d</code> <code>e</code> 是它的成员，<br>成员在字符串的位置叫索引。<br><br>JavaScript中索引从0开始。</p>
-<pre><code>成员    | a | b | c | d | e
---------------------------
-索引    | 0 | 1 | 2 | 3 | 4
-</code></pre><p>在操作字符串的时候，如果我们想要得到一个字符串中的单个的字符，可以在字符串后使用[]操作符把想要获取的成员的索引包裹住，例如：<br>    console.log(‘abcde’[0]);    // a</p>
-<pre><code>var str = &apos;abcde&apos; ;
-console.log(&apos;str[1]&apos;);        // b
-</code></pre><p>[ ] 的内部还能是表达式，以方便我们在编程的时候动态的获取单个成员，例如：</p>
-<pre><code>var str = &apos;ABCDE&apos; ;
-console.log(str[ 1 + 2 ]);    // D
+        <h3 id="如果要多次使用同一段代码，可以把他们封装成一个函数。"><a href="#如果要多次使用同一段代码，可以把他们封装成一个函数。" class="headerlink" title="如果要多次使用同一段代码，可以把他们封装成一个函数。"></a>如果要多次使用同一段代码，可以把他们封装成一个函数。</h3><p><br></p>
+<p>定义一个函数的语法：<br></p>
+<pre><code>function name(arguments){        //arguments类数组对象
+    statements;                //statements 声明；语句；    
+}
+</code></pre><p>如下是需要传递两个参数的函数。</p>
+<pre><code>function add( num1 , num2 ){
+    var total = num1 + num2 ;
+    alert(total);
+}
 
-var a = 2 , b = 2 ;
-console.log(str[ a + b ]);    // E
 
-console.log(str[ str.lengh - 1 ]);    // E
-</code></pre><p>【 <code>lengh - 1</code> 恰好是字符串最后一个成员的索引】</p>
-<h2 id="字符串切片-获取字符串中的一部分内容-："><a href="#字符串切片-获取字符串中的一部分内容-：" class="headerlink" title="字符串切片(获取字符串中的一部分内容)："></a>字符串切片(获取字符串中的一部分内容)：</h2><p>JavaScript 提供了<code>slice</code>方法让我们对字符串进行切片。<code>slice</code>方法的用法如下伪代码描述。<br></p>
-<pre><code>字符串.slice(开始的索引, 结束的索引);
-</code></pre><p>例如下列表格标注出了字符串<code>ABCDEFG</code>各个成员和索引。</p>
+add( 5 , 10 );    //弹出内容为 &apos; 15 &apos; 的对话框。
+</code></pre><h2 id="变量的作用域"><a href="#变量的作用域" class="headerlink" title="变量的作用域"></a>变量的作用域</h2><p>变量既可以是全局的，也可以是局部的。</p>
+<h4 id="全局变量-global-variable"><a href="#全局变量-global-variable" class="headerlink" title="全局变量(global variable)"></a>全局变量(global variable)</h4><p>可以在脚本的任何位置被引用，全局变量的作用域是整个脚本。</p>
+<h4 id="局部变量-local-variable"><a href="#局部变量-local-variable" class="headerlink" title="局部变量(local variable)"></a>局部变量(local variable)</h4><p>只存在于声明它的那个函数的内部，在外部是无法引用它的。局部变量的作用仅限于某个特定的函数。<br><br></p>
 <blockquote>
-<pre><code>成员    | A | B | C | D | E | F | G
-----------------------------------
-索引    | 0 | 1 | 2 | 3 | 4 | 5 | 6
-</code></pre></blockquote>
-<pre><code>var str = &apos;ABCDEFG&apos; ;
-var part1 = str.slice(0,3); //获取索引 0 开始到 3 之前的内容。
-consloe.log(part1);        // ABC 
-</code></pre><p>在<code>slice</code>方法中我们可以省略第二个参数「结束的索引」，那么此时它的行为就变成，获取从「开始的索引」开始一直到字符串结束之前的内容，例如下列代码：</p>
-<pre><code>var str = &apos;ABCDEFG&apos; ;
-var part1 = str.slice(3);    //获取从索引 3 一直到字符串结束之前的内容
-console.log(part1);        // DEFG
-</code></pre><h2 id="获取成员的索引："><a href="#获取成员的索引：" class="headerlink" title="获取成员的索引："></a>获取成员的索引：</h2><p>字符串的 <code>indexOf</code> 方法可以获取其中成员的索引。<br><br>实例：</p>
-<blockquote>
-<pre><code>成员    | A | B | C | D | E | F | G
-----------------------------------
-索引    | 0 | 1 | 2 | 3 | 4 | 5 | 6
-</code></pre></blockquote>
-<pre><code>var str = &apos;ABCDEFG&apos; ;
-var index1 = str.indexOf(&apos;B&apos;);
-console.log(index1);    // 1
-</code></pre><p>indexOf的参数除了可以是单个的字符，还可以是一个字符串，例如下列代码中从字符串’满脑子都是孩子哭了笑了’中获取，’孩子’和’哭了笑了’的索引：</p>
-<pre><code>var str = &apos;ABCDEFG&apos;;
-var index1 = str.indexOf(&apos;DEF&apos;);
-console.log(index1);     // 3
-</code></pre><p>如果找不到成员，indexOf就会返回-1，例如：</p>
-<pre><code>var str = &apos;ABCDEFG&apos;;
-var index = str.indexOf(&apos;404&apos;);
-console.log(index);     // -1
-</code></pre>
+<p>可以用 var 关键字来明确地为函数变量设定作用。<br><br>如果在某个函数使用了var，那个变量就被视为一个局部变量，它只存在于这个函数的上下文中；反之，如果没有使用var，那个变量就被视为一个全局变量，如果脚本里已经存在一个与之同名的全局变量，这个函数就会改变那个全局变量的值。</p>
+</blockquote>
+<p>如下：</p>
+<pre><code>function square(num){            //定义一个名为square的方法
+    total = num * num ;
+    return total ;
+}
+var total = 50 ;
+var number = square(20);    //导致了全局变量total的值发生了变化。
+alert(total);    // 400 .
+</code></pre><blockquote>
+<p>全局变量total的值变成了400。我们的本意是让square()函数只把它计<br>算出来的平方值返回给number，但因为没有把这个函数内部的total变量<br>明确的生命为局部变量，这个函数把名字同样是total的全局变量的值也改<br>变了。<br></p>
+</blockquote>
+<p>我们可以把函数改写成：</p>
+<pre><code>function square(num){
+    var total = num * num ;
+    return total ;
+}
+</code></pre><p>这样再怎么调用square()，也不会影响全局变量total了。</p>
+
       
     </div>
     
@@ -381,8 +359,8 @@ console.log(index);     // -1
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/09/JavaScript-数据类型/" rel="next" title="JavaScript 数据类型">
-                <i class="fa fa-chevron-left"></i> JavaScript 数据类型
+              <a href="/2018/01/10/JavaScript-字符串/" rel="next" title="JavaScript 字符串">
+                <i class="fa fa-chevron-left"></i> JavaScript 字符串
               </a>
             
           </div>
@@ -390,10 +368,6 @@ console.log(index);     // -1
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/13/JavaScript-函数/" rel="prev" title="JavaScript-函数">
-                JavaScript-函数 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -507,7 +481,7 @@ console.log(index);     // -1
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看字符串长度："><span class="nav-number">1.</span> <span class="nav-text">查看字符串长度：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-操作符取单个字符："><span class="nav-number">2.</span> <span class="nav-text">使用 [ ] 操作符取单个字符：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串切片-获取字符串中的一部分内容-："><span class="nav-number">3.</span> <span class="nav-text">字符串切片(获取字符串中的一部分内容)：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取成员的索引："><span class="nav-number">4.</span> <span class="nav-text">获取成员的索引：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#如果要多次使用同一段代码，可以把他们封装成一个函数。"><span class="nav-number">1.</span> <span class="nav-text">如果要多次使用同一段代码，可以把他们封装成一个函数。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量的作用域"><span class="nav-number"></span> <span class="nav-text">变量的作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#全局变量-global-variable"><span class="nav-number">0.1.</span> <span class="nav-text">全局变量(global variable)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#局部变量-local-variable"><span class="nav-number">0.2.</span> <span class="nav-text">局部变量(local variable)</span></a></li></ol></li></ol></div>
             
 
           </div>

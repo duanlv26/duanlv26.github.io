@@ -229,6 +229,161 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/13/JavaScript-函数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Duanlv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Duanlv's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/13/JavaScript-函数/" itemprop="url">JavaScript-函数</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-13T14:27:45+08:00">
+                2018-01-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="如果要多次使用同一段代码，可以把他们封装成一个函数。"><a href="#如果要多次使用同一段代码，可以把他们封装成一个函数。" class="headerlink" title="如果要多次使用同一段代码，可以把他们封装成一个函数。"></a>如果要多次使用同一段代码，可以把他们封装成一个函数。</h3><p><br></p>
+<p>定义一个函数的语法：<br></p>
+<pre><code>function name(arguments){        //arguments类数组对象
+    statements;                //statements 声明；语句；    
+}
+</code></pre><p>如下是需要传递两个参数的函数。</p>
+<pre><code>function add( num1 , num2 ){
+    var total = num1 + num2 ;
+    alert(total);
+}
+
+
+add( 5 , 10 );    //弹出内容为 &apos; 15 &apos; 的对话框。
+</code></pre><h2 id="变量的作用域"><a href="#变量的作用域" class="headerlink" title="变量的作用域"></a>变量的作用域</h2><p>变量既可以是全局的，也可以是局部的。</p>
+<h4 id="全局变量-global-variable"><a href="#全局变量-global-variable" class="headerlink" title="全局变量(global variable)"></a>全局变量(global variable)</h4><p>可以在脚本的任何位置被引用，全局变量的作用域是整个脚本。</p>
+<h4 id="局部变量-local-variable"><a href="#局部变量-local-variable" class="headerlink" title="局部变量(local variable)"></a>局部变量(local variable)</h4><p>只存在于声明它的那个函数的内部，在外部是无法引用它的。局部变量的作用仅限于某个特定的函数。<br><br></p>
+<blockquote>
+<p>可以用 var 关键字来明确地为函数变量设定作用。<br><br>如果在某个函数使用了var，那个变量就被视为一个局部变量，它只存在于这个函数的上下文中；反之，如果没有使用var，那个变量就被视为一个全局变量，如果脚本里已经存在一个与之同名的全局变量，这个函数就会改变那个全局变量的值。</p>
+</blockquote>
+<p>如下：</p>
+<pre><code>function square(num){            //定义一个名为square的方法
+    total = num * num ;
+    return total ;
+}
+var total = 50 ;
+var number = square(20);    //导致了全局变量total的值发生了变化。
+alert(total);    // 400 .
+</code></pre><blockquote>
+<p>全局变量total的值变成了400。我们的本意是让square()函数只把它计<br>算出来的平方值返回给number，但因为没有把这个函数内部的total变量<br>明确的生命为局部变量，这个函数把名字同样是total的全局变量的值也改<br>变了。<br></p>
+</blockquote>
+<p>我们可以把函数改写成：</p>
+<pre><code>function square(num){
+    var total = num * num ;
+    return total ;
+}
+</code></pre><p>这样再怎么调用square()，也不会影响全局变量total了。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/10/JavaScript-字符串/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -613,7 +768,7 @@ var carname;
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
