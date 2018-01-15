@@ -229,6 +229,233 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/15/DOM-Document-Object-Moudel/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Duanlv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Duanlv's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/15/DOM-Document-Object-Moudel/" itemprop="url">DOM - Document Object Moudel</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-15T22:23:35+08:00">
+                2018-01-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="文档：DOM中的”D”"><a href="#文档：DOM中的”D”" class="headerlink" title="文档：DOM中的”D”"></a>文档：DOM中的”D”</h2><p>如果没有 <strong>document(文档)</strong> ，DOM 也就无从说起。<br></p>
+<h2 id="对象：DOM中的”O”"><a href="#对象：DOM中的”O”" class="headerlink" title="对象：DOM中的”O”"></a>对象：DOM中的”O”</h2><p>JavaScript中的对象可以分为三种类型：<br></p>
+<ul>
+<li>用户定义对象(user-defined object)：由我们自行创建的对象。</li>
+<li>内建对象(native object)：内建在JavaScript中的对象，如Array、Math等。</li>
+<li>宿主对象(host object)：由浏览器提供的对象。</li>
+</ul>
+<h2 id="模型：DOM中的”M”"><a href="#模型：DOM中的”M”" class="headerlink" title="模型：DOM中的”M”"></a>模型：DOM中的”M”</h2><p>可以把网页的结构以’树’的形式显示出来。</p>
+<pre><code>&lt;DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;deom&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;This is h1&lt;/h1&gt;
+        &lt;p&gt;This is P&lt;/p&gt;    
+        &lt;ul&gt;
+            &lt;li&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/body&gt;
+</code></pre><p><img src="http://duanlv26/MarkdownPhotos/blob/c0808d92fcde671750250c83c7e6037670a67f53/dom-tree.png?raw=true" alt=""></p>
+<h2 id="节点-node"><a href="#节点-node" class="headerlink" title="节点(node)"></a>节点(node)</h2><p>节点是网络术语，它表示网络中的一个链接点。一个网络就是由一些节点构成的集合。<br><br>在DOM中有许多不同类型的节点，下面介绍了其中的三种:元素节点、文本节点和属性节点。</p>
+<p><code>&lt;p title = &quot;a gentle reminder&quot;&gt; Do not forget to buy this stuff.&lt;/p&gt;</code><br>其中<code>&lt;p&gt;&lt;/p&gt;</code>是元素节点，<code>&lt;title=&quot;a gentle reminder&quot;&gt;</code>是属性节点，<code>Do not forget to buy this stuff.</code>是文本节点。</p>
+<h3 id="元素节点-element-node"><a href="#元素节点-element-node" class="headerlink" title="元素节点(element node)"></a>元素节点(element node)</h3><p>在之前的HTML代码中，使用了 <code>&lt;body&gt;</code> <code>&lt;p&gt;</code> <code>&lt;ul&gt;</code> 之类的元素。<br>如果web上的文档是一座大厦，元素就是构建大厦的砖块，这些元素的布局构成了文档的结构。</p>
+<h3 id="文本节点-text-node"><a href="#文本节点-text-node" class="headerlink" title="文本节点(text node)"></a>文本节点(text node)</h3><p>如果一份文档完全由一些空白元素构成，它将有一个结构，但是没有内容。<br><code>&lt;p&gt;</code>元素，它就是一个文本节点。<br><br>在HTML中，文本节点总是被包含在元素节点中。</p>
+<h3 id="属性节点-object-node"><a href="#属性节点-object-node" class="headerlink" title="属性节点(object node)"></a>属性节点(object node)</h3><p>属性节点用来对元素做出更具体的描述。例如，某个元素中具有title属性，我们可以利用这个属性对包含在元素里的东西做出准确的描述：<code>&lt;p title=&quot;abcdefg&quot;&gt;Hello!&lt;/p&gt;</code><br>在DOM中，’<code>title=&quot;abcdefg</code>‘是一个属性节点。<br>属性节点总是被包含在元素节点中。</p>
+<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><p>我们可以通过CSS告诉浏览器如何显示文档的内容。<br><br>类似JavaScript脚本，对样式的声明既可以嵌在文档<code>&lt;head&gt;</code>部分，也可以放在另一个样式表文件里。</p>
+<pre><code>p{
+    color:red;    font-size:15px;
+}
+</code></pre><h3 id="获取元素"><a href="#获取元素" class="headerlink" title="获取元素"></a>获取元素</h3><p>有三种DOM方法获取元素节点，分别是通过元素ID、通过标签名字和通过类名字来获取。</p>
+<h4 id="1-getElementById"><a href="#1-getElementById" class="headerlink" title="1.getElementById"></a>1.getElementById</h4><p>&emsp;&emsp;DOM提供了名为<strong>getElementById</strong>的方法、这个方法将返回一个与那个有着给定<strong>id</strong>属性值得元素节点对应的对象。<br><br>&emsp;&emsp;它是 <strong>document</strong>对象的特有函数。getElementById方法只有一个参数：你想获得的那个元素的id属性的值。</p>
+<pre><code>document.getElementById(id);
+</code></pre><p>下面是个例子：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;What you buy&lt;/h1&gt;
+    &lt;p title=&quot; a gentle reminder&quot;&gt;Do not forget to buy this stuff.&lt;/p&gt;    
+    &lt;ul id=&quot;purchases&quot;&gt;
+            &lt;li&gt;A&lt;/li&gt;
+            &lt;li class=&quot;sale&quot;&gt;B&lt;/li&gt;
+            &lt;li class=&quot;sale important&quot;&gt;C&lt;/li&gt;
+    &lt;/ul&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+    alert(typeof document.getElementById(&quot;purchases&quot;));
+    //会弹出一个内容是object的对话框，它向你报告document.getElementById的类型。(它是一个对象)
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>这个调用将返回一个对象，这个对象对应着document对象里的独一无二的元素，那个元素的HTML id 属性是 <code>purchases</code>。</p>
+<p>&emsp;&emsp;文档的每一个元素都是一个对象，利用DOM方法能得到任意一个对象。</p>
+<h4 id="2-getElementsByTagName"><a href="#2-getElementsByTagName" class="headerlink" title="2.getElementsByTagName"></a>2.getElementsByTagName</h4><p>&emsp;&emsp;<strong>getElementsByTagName</strong>方法返回一个对象数组，每个对象分别对应着文档里有着给定标签的一个元素。</p>
+<pre><code>document.getElementsByTagName(&quot;li&quot;)
+//这个调用将返回一个对象数组。
+
+alert(document.getElementsByTagName(&quot;li&quot;).length)
+//弹出这份文档中列表项元素的个数。(3个)
+
+//可以用for循环和typeof操作符验证
+for (var i=0; i &lt; document.getElementsByTagName(&quot;li&quot;).length; i++){
+    alert(typeof document.getElementsByTagName(&quot;li&quot;)[i]);
+}
+//可以改善代码，如下：
+var items = document.getElementsByTagName(&quot;li&quot;)；
+for (var = 0 ; i &lt; items.length; i++){
+    alert(typeof items[i]);
+}
+//显示三个对话框，全部是object。
+</code></pre><p>也允许<strong>getElementByTagName</strong>把一个通配符<strong>(“ * “)</strong>作为参数，这意味着文档里的每一个元素都在函数返回的数组里具有地位。</p>
+<pre><code>alert(document.getElementsByName(&quot;*&quot;).length);
+</code></pre><p>可以把<strong>getElementById</strong>和<strong>getElementsByName</strong>结合使用：</p>
+<pre><code>var shopping = document.getElementById(&quot;purchases&quot;);
+var items = shopping.getElementByTagName(&quot; * &quot;);
+//item数组只包含id为 purchases(id=&quot;purchase&quot;)的 li 里的元素
+</code></pre><h4 id="3-getElementsByClassName"><a href="#3-getElementsByClassName" class="headerlink" title="3.getElementsByClassName"></a>3.getElementsByClassName</h4><p>HTML5 DOM中新增加了这个方法。这个方法使我们可以通过<strong>class</strong>属性中的类名称来访问元素。与getElementsByTagName相似，也只接受一个参数。</p>
+<pre><code>getElementsByClassName(&quot;class&quot;)；    //只接受类名
+//.....也可以接受多个类名(&quot;class1 class2&quot;)
+</code></pre><p>例</p>
+<pre><code>alert(document.getElementsByClassName(&quot;important sale&quot;).length);
+//警告框中显示1，表示只有一个元素匹配，因为只有一个元素同时带有&quot;important&quot;和&quot;sale&quot;两个类名。
+</code></pre><h3 id="获取和设置属性"><a href="#获取和设置属性" class="headerlink" title="获取和设置属性"></a>获取和设置属性</h3><p>&emsp;&emsp;我们已经有三种获取特定元素的方法了，得到元素之后，我们就可以设法获取他的各个属性。我们有两种方法：<strong>getAttribute</strong>和<strong>setAttribute</strong>。</p>
+<h4 id="1-getAttribute"><a href="#1-getAttribute" class="headerlink" title="1.getAttribute"></a>1.getAttribute</h4><p>getAttribute是一个函数。它只有一个参数(你打算查询的属性的名字)：</p>
+<pre><code>object.getAttribute(&quot;...&quot;)
+</code></pre><p>getAttribute不属于document对象。它只能通过元素节点对象调用。我们可以和getElementsByTagName方法合用。</p>
+<pre><code>//获取每个&lt;p&gt;元素的title属性
+var paras = document.getElementsByTagName(&quot;p&quot;);
+for(var i=0; i&lt;paras.length; i++){
+    alert(paras[i].getAttribute(&quot;title&quot;));
+}
+
+//会弹出内容是&quot;a gentle reminder&quot;的对话框
+</code></pre><h4 id="2-setAttribute"><a href="#2-setAttribute" class="headerlink" title="2.setAttribute"></a>2.setAttribute</h4><p>setAttribute是用来改变信息的。和get…te一样，也只能用于节点。</p>
+<pre><code>object.setAttribute(&quot;...&quot;,&quot;value&quot;)
+
+//得到id是purchase的元素，然后把这个元素的title属性设置为a list of goods
+var shopping = document.ElementById(&quot;purchases&quot;);
+shopping.setAttribute(&quot;title&quot;,&quot;a list of goods&quot;);
+</code></pre><p>学的我脑袋都大啦！！！！&gt;.&lt;</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/13/JavaScript-对象/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -870,6 +1097,126 @@ var carname;
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/1997/06/26/1997-06-26/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Duanlv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Duanlv's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/1997/06/26/1997-06-26/" itemprop="url">Thu Jun 26 1997 00:00:00 GMT+0800 (中国标准时间)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="1997-06-26T00:00:00+08:00">
+                1997-06-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="2018-01-13"><a href="#2018-01-13" class="headerlink" title="2018-01-13"></a>2018-01-13</h2><p>&emsp;&emsp;很少写日记，之前在Evernote里面写了好多篇也没再继续。最近感觉压力好大，终于把HTML和CSS的内容都接触了一遍，学完的时候感觉自己与入门的距离近在咫尺，可并不是这样。又在网上了解了一下现在的前端，发觉自己还有很长的一段路要走，很多东西都要学，对之后的道路一点都没有了解，谁让我选择了这条路呢，当然也没有更好的选择。<br><br>&emsp;&emsp;期望有一天可以明朗。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -916,7 +1263,7 @@ var carname;
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
