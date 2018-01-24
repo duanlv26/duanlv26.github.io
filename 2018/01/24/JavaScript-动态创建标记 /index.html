@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="对象(object)是数据类型，对象是自包含的数据集合，包含在对象里的数据可以通过两种形式访问：属性(property)和方法(method)。  属性是隶属于某个特定对象的变量。方法是只有某个特定对象才能调用的函数。  对象就是由一些属性和方法组合在一起而构成的一个数据实体。 Object.property Object.method()       //在JavaScript中，属性和方法都使">
+<meta name="description" content="DOM方法createElement 创建新元素&amp;lt;div id=&amp;quot;testdiv&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;  &amp;lt;script&amp;gt;     var para = document.createElement(&amp;quot;p&amp;quot;); &amp;lt;/script&amp;gt; appendChild 插入子节点&amp;lt;div id=&amp;quot;testdiv&amp;q">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript-对象">
-<meta property="og:url" content="http://yoursite.com/2018/01/13/JavaScript-对象/index.html">
+<meta property="og:title" content="JavaScript-动态创建标记">
+<meta property="og:url" content="http://yoursite.com/2018/01/24/JavaScript-动态创建标记 /index.html">
 <meta property="og:site_name" content="Duanlv&#39;s blog">
-<meta property="og:description" content="对象(object)是数据类型，对象是自包含的数据集合，包含在对象里的数据可以通过两种形式访问：属性(property)和方法(method)。  属性是隶属于某个特定对象的变量。方法是只有某个特定对象才能调用的函数。  对象就是由一些属性和方法组合在一起而构成的一个数据实体。 Object.property Object.method()       //在JavaScript中，属性和方法都使">
+<meta property="og:description" content="DOM方法createElement 创建新元素&amp;lt;div id=&amp;quot;testdiv&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;  &amp;lt;script&amp;gt;     var para = document.createElement(&amp;quot;p&amp;quot;); &amp;lt;/script&amp;gt; appendChild 插入子节点&amp;lt;div id=&amp;quot;testdiv&amp;q">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-13T13:02:59.564Z">
+<meta property="og:updated_time" content="2018-01-24T10:53:31.673Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript-对象">
-<meta name="twitter:description" content="对象(object)是数据类型，对象是自包含的数据集合，包含在对象里的数据可以通过两种形式访问：属性(property)和方法(method)。  属性是隶属于某个特定对象的变量。方法是只有某个特定对象才能调用的函数。  对象就是由一些属性和方法组合在一起而构成的一个数据实体。 Object.property Object.method()       //在JavaScript中，属性和方法都使">
+<meta name="twitter:title" content="JavaScript-动态创建标记">
+<meta name="twitter:description" content="DOM方法createElement 创建新元素&amp;lt;div id=&amp;quot;testdiv&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;  &amp;lt;script&amp;gt;     var para = document.createElement(&amp;quot;p&amp;quot;); &amp;lt;/script&amp;gt; appendChild 插入子节点&amp;lt;div id=&amp;quot;testdiv&amp;q">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/13/JavaScript-对象/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/24/JavaScript-动态创建标记 /"/>
 
 
 
 
 
-  <title>JavaScript-对象 | Duanlv's blog</title>
+  <title>JavaScript-动态创建标记 | Duanlv's blog</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/13/JavaScript-对象/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/24/JavaScript-动态创建标记 /">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Duanlv">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JavaScript-对象</h1>
+          <h1 class="post-title" itemprop="name headline">JavaScript-动态创建标记</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-13T21:02:25+08:00">
-                2018-01-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-24T18:41:50+08:00">
+                2018-01-24
               </time>
             
 
@@ -299,35 +299,33 @@
       
 
       
-        <p><strong>对象(object)</strong>是数据类型，对象是自包含的数据集合，包含在对象里的数据可以通过两种形式访问：<strong>属性(property)</strong>和<strong>方法(method)</strong>。<br></p>
-<blockquote>
-<p>属性是隶属于某个特定对象的变量。<br><br>方法是只有某个特定对象才能调用的函数。<br></p>
-</blockquote>
-<p>对象就是由一些属性和方法组合在一起而构成的一个数据实体。<br></p>
-<pre><code>Object.property
-Object.method()       //在JavaScript中，属性和方法都使用&apos; . &apos;来访问。
-</code></pre><p>假设以一个人为对象，我们要使用 mood 和 age 等变量来储存如 “心情”和“年龄”之类的值。</p>
-<pre><code>Person.mood
-Person.age            //mood和age是Person的属性
-</code></pre><p>假如 Person 对象还关联着如 walk() 和 sleep() 之类的函数，这些函数就是这个对象的方法。</p>
-<pre><code>Person.walk()
-Person.sleep()        //walk和sleep是Person的方法
-</code></pre><p>把这些属性和方法全部结合在一起，就得到了一个 <strong>Person</strong> 对象。</p>
-<p>但是不可能只有一个person，虽然都是person对象，但是可能具有不同的属性，我们可以像下面这样利用Person对象的属性来检索关于 wangwei 的信息。</p>
-<pre><code>var wangwei = new Person ;
+        <h2 id="DOM方法"><a href="#DOM方法" class="headerlink" title="DOM方法"></a>DOM方法</h2><h3 id="createElement-创建新元素"><a href="#createElement-创建新元素" class="headerlink" title="createElement 创建新元素"></a>createElement 创建新元素</h3><pre><code>&lt;div id=&quot;testdiv&quot;&gt;&lt;/div&gt;
 
-//创建了一个Person对象的新实例。
+&lt;script&gt;
+    var para = document.createElement(&quot;p&quot;);
+&lt;/script&gt;
+</code></pre><h3 id="appendChild-插入子节点"><a href="#appendChild-插入子节点" class="headerlink" title="appendChild 插入子节点"></a>appendChild 插入子节点</h3><pre><code>&lt;div id=&quot;testdiv&quot;&gt;&lt;/div&gt;
 
-wangwei.age
-wangwei.mood    //我们可以利用Person对象的属性检索wangwei的信息。
+&lt;script&gt;
+    var para = document.createElement(&quot;p&quot;);    //创建值为para的&lt;p&gt;元素
+
+    var textdiv = document.getElement(&quot;div&quot;);    //获取&lt;div&gt;元素的节点
+    textdiv.appendChild(para);    //把&lt;p&gt;元素插入到&lt;div&gt;中
+&lt;/script&gt;
+</code></pre><h3 id="createTextNode-创建文本节点"><a href="#createTextNode-创建文本节点" class="headerlink" title="createTextNode 创建文本节点"></a>createTextNode 创建文本节点</h3><pre><code>&lt;div id=&quot;testdiv&quot;&gt;&lt;/div&gt;
+
+&lt;script&gt;
+    var para = document.createElement(&quot;p&quot;);
+
+    var textdiv = document.getElement(&quot;div&quot;);
+    textdiv.appendChild(para);    
+
+    var txt = document.createTextNode(&quot;Hello!&quot;);    //创建名为txt的文本节点
+    para.appendChild(txt);    //把文本节点插入到&lt;p&gt;元素中
+&lt;/script&gt;
 </code></pre><hr>
-<h2 id="内建对象"><a href="#内建对象" class="headerlink" title="内建对象"></a>内建对象</h2><p>数组其实就是一种内建对象。<br>当我们使用<strong>new</strong>关键字去初始化一个数组时，其实是在创建一个Array对象的新实例。</p>
-<pre><code>var word = new Array();
-</code></pre><blockquote>
-<p>当需要了解某个数组有多少个元素时，利用Array对象的length属性获取信息：</p>
-</blockquote>
-<pre><code>beatles.length;
-</code></pre><h2 id="宿主对象"><a href="#宿主对象" class="headerlink" title="宿主对象"></a>宿主对象</h2><p>除了内建对象，还可以在JS脚本里使用一些已经预先定义好的其他对象。 这些对象不是由JS语言本身，而是由它的运行环境提供的。具体到Web应用，这个环境就是浏览器。由浏览器提供的预定义对象被称为<strong>宿主对象(host object)</strong>。</p>
+<p>最后HTML在网页显示是：</p>
+<p><code>Hello!</code></p>
 
       
     </div>
@@ -352,8 +350,8 @@ wangwei.mood    //我们可以利用Person对象的属性检索wangwei的信息�
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/13/JavaScript-函数/" rel="next" title="JavaScript-函数">
-                <i class="fa fa-chevron-left"></i> JavaScript-函数
+              <a href="/2018/01/21/JavaScript-test/" rel="next" title="JavaScript-test 图片库平稳退化,JS分离">
+                <i class="fa fa-chevron-left"></i> JavaScript-test 图片库平稳退化,JS分离
               </a>
             
           </div>
@@ -361,10 +359,6 @@ wangwei.mood    //我们可以利用Person对象的属性检索wangwei的信息�
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/15/DOM-Document-Object-Moudel/" rel="prev" title="DOM - Document Object Moudel">
-                DOM - Document Object Moudel <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -478,7 +472,7 @@ wangwei.mood    //我们可以利用Person对象的属性检索wangwei的信息�
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#内建对象"><span class="nav-number">1.</span> <span class="nav-text">内建对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#宿主对象"><span class="nav-number">2.</span> <span class="nav-text">宿主对象</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM方法"><span class="nav-number">1.</span> <span class="nav-text">DOM方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#createElement-创建新元素"><span class="nav-number">1.1.</span> <span class="nav-text">createElement 创建新元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#appendChild-插入子节点"><span class="nav-number">1.2.</span> <span class="nav-text">appendChild 插入子节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#createTextNode-创建文本节点"><span class="nav-number">1.3.</span> <span class="nav-text">createTextNode 创建文本节点</span></a></li></ol></li></ol></div>
             
 
           </div>

@@ -229,6 +229,152 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/24/JavaScript-动态创建标记 /">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Duanlv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Duanlv's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/24/JavaScript-动态创建标记 /" itemprop="url">JavaScript-动态创建标记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-24T18:41:50+08:00">
+                2018-01-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="DOM方法"><a href="#DOM方法" class="headerlink" title="DOM方法"></a>DOM方法</h2><h3 id="createElement-创建新元素"><a href="#createElement-创建新元素" class="headerlink" title="createElement 创建新元素"></a>createElement 创建新元素</h3><pre><code>&lt;div id=&quot;testdiv&quot;&gt;&lt;/div&gt;
+
+&lt;script&gt;
+    var para = document.createElement(&quot;p&quot;);
+&lt;/script&gt;
+</code></pre><h3 id="appendChild-插入子节点"><a href="#appendChild-插入子节点" class="headerlink" title="appendChild 插入子节点"></a>appendChild 插入子节点</h3><pre><code>&lt;div id=&quot;testdiv&quot;&gt;&lt;/div&gt;
+
+&lt;script&gt;
+    var para = document.createElement(&quot;p&quot;);    //创建值为para的&lt;p&gt;元素
+
+    var textdiv = document.getElement(&quot;div&quot;);    //获取&lt;div&gt;元素的节点
+    textdiv.appendChild(para);    //把&lt;p&gt;元素插入到&lt;div&gt;中
+&lt;/script&gt;
+</code></pre><h3 id="createTextNode-创建文本节点"><a href="#createTextNode-创建文本节点" class="headerlink" title="createTextNode 创建文本节点"></a>createTextNode 创建文本节点</h3><pre><code>&lt;div id=&quot;testdiv&quot;&gt;&lt;/div&gt;
+
+&lt;script&gt;
+    var para = document.createElement(&quot;p&quot;);
+
+    var textdiv = document.getElement(&quot;div&quot;);
+    textdiv.appendChild(para);    
+
+    var txt = document.createTextNode(&quot;Hello!&quot;);    //创建名为txt的文本节点
+    para.appendChild(txt);    //把文本节点插入到&lt;p&gt;元素中
+&lt;/script&gt;
+</code></pre><hr>
+<p>最后HTML在网页显示是：</p>
+<p><code>Hello!</code></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/21/JavaScript-test/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1480,7 +1626,7 @@ var carname;
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
